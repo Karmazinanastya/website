@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab 5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <!-- Task 1 -->
+    <h2>Розрахунок прямокутника</h2> 
+    <label for="length">Довжина</label>
+    <input type="number" id="length" onchange="calculateRectangle()">
+    <br>
+
+    <label for="width">Ширина</label>
+    <input type="number" id="width" onchange="calculateRectangle()">
+    <br>
+
+    <p>Периметр: <span id="perimeter">0</span></p>
+    <p>Площа: <span id="area">0</span></p>
+    <p>Довжина діагоналі: <span id="diagonal">0</span></p>
+
+
+    <!-- Task 2 -->
+    <h2>Чат</h3> 
+    <div id="chat-box">
+        <div id="messages"></div>
+    </div>
+    <div id="input-box">
+        <input type="text" id="user1Input" class="message-input" placeholder="User 1 повідомлення">
+        <button id="user1Button" class="send-button">Надіслати User 1</button>
+    </div>
+    <div id="input-box">
+        <input type="text" id="user2Input" class="message-input" placeholder="User 2 повідомлення">
+        <button id="user2Button" class="send-button">Надіслати User 2</button>
+    </div>
+
+
+    <!-- Task 3 --> 
+    <h2>Українська Транслітерація</h2>
+    <div>
+        <label for="ukrainianText">Український текст</label>
+        <textarea id="ukrainianText" rows="5" cols="40"></textarea>
+    </div>
+    <div>
+        <label for="transliteratedText">Транслітерований текст</label>
+        <textarea id="transliteratedText" rows="5" cols="40" readonly></textarea>
+    </div>
+
+
+    <!-- Task 4 -->
+    <h2>Визначення дня тижня народження</h2>
+    <form id="dayOfWeekForm">
+        <label for="year">Рік:</label>
+        <input type="number" id="year" min="0" required><br>
+
+        <label for="month">Місяць:</label>
+        <input type="number" id="month" min="1" max="12" required><br>
+
+        <label for="day">День:</label>
+        <input type="number" id="day" min="1" max="31" required><br>
+
+        <button type="button" onclick="findDayOfWeek()">Визначити день тижня</button>
+    </form>
+
+        <div id="result"></div>
+        <div id="error"></div>
+
+  <script src="main.js"></script>
+</body>
+</html>
